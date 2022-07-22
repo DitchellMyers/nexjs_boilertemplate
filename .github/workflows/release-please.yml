@@ -1,0 +1,21 @@
+name: release-please
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          release-type: node
+          package-name: release-please-action
+          pull-request-title-pattern: 'chore${scope}: Release ${component} ${version}'
+          default-branch: ${{ github.ref_name }}
