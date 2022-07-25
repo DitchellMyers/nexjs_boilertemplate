@@ -1,6 +1,6 @@
 {
   "name": "nexjs_boilertemplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,6 +16,7 @@
     "apollo-server-micro": "^3.10.0",
     "aws-sdk": "^2.1176.0",
     "babel-plugin-superjson-next": "^0.4.3",
+    "clsx": "^1.2.1",
     "cookie": "^0.5.0",
     "cookies": "^0.8.0",
     "graphql": "^16.5.0",
