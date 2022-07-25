@@ -1,4 +1,5 @@
 import { FunctionComponent } from 'react'
+import Container from '../../ui/Container'
 
 interface LinkItem {
   id: number
@@ -12,11 +13,11 @@ type Navigation = {
 
 const Navigation: FunctionComponent<Navigation> = ({ Links }) => {
   return (
-    <div>
+    <Container center={true}>
       {Links.map((link) => (
-        <div key={link.id}>{link.name}</div>
+        <Container className='border-blue-700 border-2 p-2 m-2' color={{ base: 'text-black', sm: 'text-pink-300', lg: 'text-blue-400' }} key={link.id}>{link.name}</Container>
       ))}
-    </div>
+    </Container>
   )
 }
 
